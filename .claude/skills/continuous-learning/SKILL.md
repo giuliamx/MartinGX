@@ -1,0 +1,390 @@
+---
+name: continuous-learning
+description: Use when transform session insights into actionable skills with confidence-weighted
+  scoring — captures patterns, analyzes outcomes, and integrates learnings to improve
+  agent performance. Use when working with continuous learning.
+domain: research
+author: oyi77
+license: Apache-2.0
+subdomain: research
+tags:
+- ai-agent
+- analysis
+- continuous
+- investigation
+- learning
+- research
+version: 1.0.0
+category: research
+---
+
+persona:
+  name: "Domain Expert"
+  title: "Master of Continuous Learning"
+  expertise: ['Specialized Knowledge', 'Best Practices', 'Industry Standards']
+  philosophy: "Excellence through expertise."
+  credentials: ['Industry leader', 'Practiced expert', 'Thought leader']
+  principles: ['Quality first', 'Continuous improvement', 'Evidence-based decisions', 'Customer focus']
+
+
+
+# Continuous Learning Skill
+
+## Overview
+
+Evolve instinct-based insights from sessions into actionable skills with confidence-weighted learning. This skill creates a feedback loop that improves agent performance over time based on playbooks.com continuous-learning-v2.
+
+**Purpose**: Self-improvement through learning  
+**Output**: New skills, improvements, learnings  
+**Frequency**: Ongoing
+
+---
+
+
+## Anti-Rationalization Table
+
+| Rationalization | Reality |
+|---|---|
+| "I'll figure it out as I go" | A structured approach saves time and reduces errors. Follow the workflow in this skill rather than improvising. |
+| "I already know this topic" | Familiarity breeds shortcuts. Use the checklist to verify you haven't missed critical steps. |
+| "This doesn't apply to my situation" | The patterns here generalize across contexts. Adapt, don't skip — the underlying principles hold. |
+| "One more tool will fix it" | Adding complexity rarely solves process gaps. Master the core workflow first. |
+
+## When to Use
+**Trigger phrases:**
+- "continuous learning"
+- "Transform session insights into actionable skills with confidence-weighted scori"
+
+
+- After successful task completion
+- When encountering recurring patterns
+- Before similar future tasks
+- To capture learnings from failures
+
+---
+
+## Learning Loop
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                    Learning Cycle                         │
+├─────────────────────────────────────────────────────────┤
+│  1. Capture    →  2. Analyze    →  3. Synthesize       │
+│       ↓                ↓               ↓                │
+│  4. Document   →  5. Integrate  →  6. Apply           │
+└─────────────────────────────────────────────────────────┘
+```
+
+### Phase 1: Capture
+```
+After each session, capture:
+- Successful patterns
+- Effective prompts
+- Useful tools
+- Mistakes made
+- Edge cases discovered
+```
+
+### Phase 2: Analyze
+```
+Identify:
+- Patterns across sessions
+- High-value learnings
+- Confidence levels
+- When approaches worked/failed
+```
+
+### Phase 3: Synthesize
+```
+Create:
+- New skill recommendations
+- Prompt improvements
+- Tool additions
+- Workflow optimizations
+```
+
+### Phase 4: Document
+```
+Store in:
+- MEMORY.md (curated learnings)
+- skill-specific notes
+- session logs
+```
+
+### Phase 5: Integrate
+```
+Apply:
+- Update existing skills
+- Create new skills
+- Modify workflows
+```
+
+### Phase 6: Apply
+```
+Use learnings in:
+- Future tasks
+- Skill selection
+- Problem solving
+```
+
+---
+
+## Confidence Weighting
+
+Weight findings by source tier and cross-reference count.
+
+
+### Levels
+```
+HIGH (0.8-1.0): Repeated success, verified approach
+MEDIUM (0.5-0.7): Worked a few times, needs testing
+LOW (0.2-0.4): Single success, uncertain
+EXPLORATORY (<0.2): Hypothesis, needs validation
+```
+
+### Application Rules
+```
+High confidence:
+- Apply automatically
+- Add to skill defaults
+
+Medium confidence:
+- Suggest as option
+- Test in parallel
+
+Low confidence:
+- Propose for testing
+- Monitor results
+
+Exploratory:
+- Try alongside existing
+- Compare results
+```
+
+---
+
+## Insight Types
+
+Categorize insights as factual, analytical, or speculative.
+
+
+### 1. Prompt Insights
+```
+What worked:
+- Specific phrasing
+- Structure
+- Examples
+
+How to apply:
+- Add to skill prompts
+- Create new patterns
+```
+
+### 2. Tool Insights
+```
+What worked:
+- Tool combinations
+- Sequencing
+- Parameters
+
+How to apply:
+- Add to workflow skills
+- Update tool usage
+```
+
+### 3. Approach Insights
+```
+What worked:
+- Problem decomposition
+- Reasoning patterns
+- Verification methods
+
+How to apply:
+- Create methodology skills
+- Update process skills
+```
+
+### 4. Failure Insights
+```
+What didn't work:
+- Root causes
+- Edge cases
+- Assumptions wrong
+
+How to prevent:
+- Add to skill guards
+- Create validation steps
+```
+
+---
+
+## Implementation
+
+How to set up and configure this skill.
+
+
+### Session Analysis
+```typescript
+async function analyzeSession(session) {
+  const insights = {
+    prompts: extractPromptPatterns(session),
+    tools: extractToolUsage(session),
+    approaches: extractApproaches(session),
+    failures: extractFailures(session)
+  };
+  
+  const weighted = insights.map(i => ({
+    ...i,
+    confidence: calculateConfidence(i)
+  }));
+  
+  return weighted;
+}
+```
+
+### Skill Generation
+```typescript
+async function generateSkill(insight) {
+  if (insight.confidence < 0.5) return null;
+  
+  const skill = {
+    name: insight.name,
+    trigger: insight.trigger,
+    action: insight.action,
+    confidence: insight.confidence
+  };
+  
+  return skill;
+}
+```
+
+---
+
+## Learning Storage
+
+Persist insights for future retrieval and reuse.
+
+
+### Structure
+```
+learning/
+├── insights/
+│   ├── high-confidence/
+│   ├── medium-confidence/
+│   └── exploratory/
+├── skills/
+│   ├── created/
+│   └── proposed/
+├── patterns/
+│   ├── prompts/
+│   ├── tools/
+│   └── approaches/
+└── feedback/
+    ├── success/
+    └── failure/
+```
+
+---
+
+## Integration
+
+Connect learning outputs to downstream workflows.
+
+
+### With Runtime-Self-Improvement
+```
+1. Capture insights during tasks
+2. Analyze for patterns
+3. Generate skills
+4. Apply improvements
+5. Commit changes
+```
+
+### With Skill-Performance-Monitor
+```
+- Track insight effectiveness
+- Measure improvement impact
+- Identify new opportunities
+```
+
+---
+
+## Metrics
+
+| Metric | Target |
+|--------|--------|
+| Insights captured/session | 3+ |
+| High-confidence insights | 30%+ |
+| Skills generated/month | 5+ |
+| Improvement in success rate | 10%+/quarter |
+
+---
+
+## Best Practices
+
+Key aspects of continuous-learning relevant to this section.
+
+
+### Do's
+✅ Capture every session  
+✅ Be specific about what worked  
+✅ Weight confidence honestly  
+✅ Review learnings regularly  
+✅ Test before full application  
+
+### Don'ts
+❌ Don't overfit to single cases  
+❌ Don't ignore failures  
+❌ Don't skip edge cases  
+❌ Don't apply low-confidence blindly  
+
+---
+
+## Version History
+
+- **v1.0** (2026-02-27) - Initial creation
+  - Based on playbooks.com continuous-learning-v2
+
+---
+
+
+## When NOT to Use
+
+- When the research requires access to proprietary databases or paywalled sources
+- When findings will be used for financial decisions requiring licensed advisor review
+- When the task is too trivial to warrant this skill
+- When a more appropriate skill exists
+
+## Common Rationalizations
+
+| Rationalization | Reality |
+|---|---|
+| "I'll do this later" | Explain why this excuse is wrong for this skill |
+| "This is simple, skip steps" | Even simple tasks benefit from process |
+
+## Red Flags
+
+- Research relies on a single unverified source
+- Agent presents speculation as confirmed findings
+- Watch for shortcuts and skipped steps
+
+## Verification
+
+After completing this skill, confirm:
+
+- [ ] Findings are verified across multiple independent sources
+- [ ] Research methodology is documented and reproducible
+- [ ] All required outputs generated
+- [ ] Success criteria met
+
+## Related Skills
+
+- [runtime-self-improvement](../../core/runtime-self-improvement/SKILL.md) - Apply improvements
+- [skill-performance-monitor](../../core/skill-performance-monitor/SKILL.md) - Track effectiveness
+- [self-improving](../../core/self-improving/SKILL.md) - Basic self-improvement
+
+## Process
+
+1. Analyze the task requirements
+2. Apply domain expertise
+3. Verify output quality
